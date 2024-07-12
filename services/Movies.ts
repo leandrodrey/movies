@@ -14,7 +14,9 @@ export async function getMovies(genre?: string, sortOrder: 'asc' | 'desc' = 'asc
 
     url.search = params.toString();
 
-    const res = await fetch(url);
+    const res = await fetch(url, {
+        next: { revalidate: 0 } // Disable caching for this request
+    });
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');
@@ -24,7 +26,9 @@ export async function getMovies(genre?: string, sortOrder: 'asc' | 'desc' = 'asc
 }
 
 export const getMovieById = async (id: string): Promise<IMovie> => {
-    const res = await fetch(process.env.BASE_API_URL + '/movies/' + id);
+    const res = await fetch(process.env.BASE_API_URL + '/movies/' + id, {
+        next: { revalidate: 0 } // Disable caching for this request
+    });
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');

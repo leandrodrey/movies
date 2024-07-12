@@ -2,6 +2,7 @@ import {IMovie} from '@/interfaces/IMovie';
 import {getMovies} from "@/services/Movies";
 import MovieCard from "@/components/MovieCard";
 import CategoriesButtons from "@/components/CategoriesButtons";
+import Link from "next/link";
 
 export default async function Home() {
 
@@ -13,7 +14,7 @@ export default async function Home() {
                 <section className="hero py-16 px-8 bg-cover bg-center" style={{backgroundImage: "url('cine.jpg')"}}>
                     <h2 className="text-5xl font-bold mb-4">Películas y series ilimitadas y mucho más.</h2>
                     <p className="text-xl mb-8">Disfruta donde quieras. Cancela cuando quieras.</p>
-                    <button className="bg-red-600 text-white px-6 py-3 rounded text-xl">Comenzar</button>
+                    <Link href="/Register"><button className="bg-red-600 text-white px-6 py-3 rounded text-xl">Comenzar</button></Link>
                 </section>
 
                 <section className="categories py-16 px-8">

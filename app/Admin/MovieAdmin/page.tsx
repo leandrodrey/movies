@@ -4,6 +4,8 @@ import {UserContext} from "@/context/UserProvider";
 import {useRouter} from "next/navigation";
 import Loader from "@/components/ui/Loader";
 import PageTitle from "@/components/ui/PageTitle";
+import GenericButton from "@/components/ui/GenericButton";
+import Link from "next/link";
 
 interface Movie {
     id: number;
@@ -75,6 +77,8 @@ const AdminPage: FC = () => {
     return (
         <>
             <PageTitle text="Administrar Películas" />
+            <Link className="text-center block mt-4 mb-5" href="/Admin/MovieAdmin/CreateMovie"><GenericButton text="Crear una nueva película" /></Link>
+
             {movies.length > 0 ? (
                 <table className="table-auto w-full">
                     <thead>

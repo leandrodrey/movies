@@ -1,14 +1,20 @@
 'use client'
-import React, {FC, FormEvent, useContext, useState} from 'react';
+import React, {FC, FormEvent, useContext, useEffect, useState} from 'react';
 import {UserContext} from "@/context/UserProvider";
 import {useRouter} from "next/navigation";
 
 const LoginPage: FC = () => {
     const router = useRouter();
-    const {setUser} = useContext(UserContext);
+    const {user, setUser} = useContext(UserContext);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    useEffect(() => {
+        if (user) {
+            router.push('/');
+        }
+    }, []);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -35,6 +41,7 @@ const LoginPage: FC = () => {
         const loginResult = await loginResponse.json();
         console.log(loginResult);
         alert('Usuario logueado: ' + loginResult.user.name);
+        localStorage.setItem('user', JSON.stringify(loginResult));
         setUser(loginResult);
         router.push('/');
     };

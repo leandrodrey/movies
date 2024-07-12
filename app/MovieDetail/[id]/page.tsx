@@ -2,6 +2,8 @@ import {FC} from 'react';
 import Image from "next/image";
 import {IMovie} from "@/interfaces/IMovie";
 import {getMovieById} from "@/services/Movies";
+import GenericButton from "@/components/ui/GenericButton";
+import Link from "next/link";
 
 interface MovieDetailProps {
     params: {
@@ -18,7 +20,7 @@ const MovieDetailPage: FC<MovieDetailProps> = async ({params}) => {
         <div className="bg-black text-white p-8">
             <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3">
-                    <Image src={movie.poster} alt={movie.title} className="w-full rounded-lg shadow-lg"/>
+                    <Image src={movie.poster} alt={movie.title} className="w-full rounded-lg shadow-lg" width={200} height={200} />
                 </div>
                 <div className="md:w-2/3 md:pl-8 mt-4 md:mt-0">
                     <h1 className="text-4xl font-bold">{movie.title} ({movie.year})</h1>
@@ -82,6 +84,8 @@ const MovieDetailPage: FC<MovieDetailProps> = async ({params}) => {
                     </div>
                 )}
             </div>
+
+            <Link className="text-center block mt-4 mb-5" href="/"><GenericButton text="Volver a la Home" /></Link>
         </div>
     );
 };
