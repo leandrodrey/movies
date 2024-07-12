@@ -1,0 +1,6 @@
+{
+  "extends": "next/core-web-vitals", // Extiende la configuración base de Next.js
+  "rules": {
+    "indent": ["error", 4] // Configura la regla de indentación
+  }
+}
