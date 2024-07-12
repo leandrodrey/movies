@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 const categories = [
-    { name: 'Acción', href: '/MovieCategory/action' },
-    { name: 'Comedia', href: '/MovieCategory/Comedia' },
+    { name: 'Acción', href: '/MovieCategory/Action' },
+    { name: 'Comedia', href: '/MovieCategory/Comedy' },
     { name: 'Drama', href: '/MovieCategory/Drama' },
-    { name: 'Documentales', href: '/MovieCategory/Documentales' },
+    { name: 'Fantasía', href: '/MovieCategory/Fantasy' },
 ];
 
 const CategoriesButtons = () => {
