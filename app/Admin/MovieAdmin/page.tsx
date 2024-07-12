@@ -24,7 +24,7 @@ const AdminPage: FC = () => {
         } else {
             fetchMovies();
         }
-    }, []);
+    }, [user, router]);
 
     async function fetchMovies() {
         try {
@@ -78,33 +78,33 @@ const AdminPage: FC = () => {
             {movies.length > 0 ? (
                 <table className="table-auto w-full">
                     <thead>
-                    <tr>
-                        <th className="px-4 py-2">ID</th>
-                        <th className="px-4 py-2">Título</th>
-                        <th className="px-4 py-2">Género</th>
-                        <th className="px-4 py-2">Duración</th>
-                        <th className="px-4 py-2">Acción</th>
-                    </tr>
+                        <tr>
+                            <th className="px-4 py-2">ID</th>
+                            <th className="px-4 py-2">Título</th>
+                            <th className="px-4 py-2">Género</th>
+                            <th className="px-4 py-2">Duración</th>
+                            <th className="px-4 py-2">Acción</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {movies.map((movie: Movie) => (
-                        <tr key={movie.id}>
-                            <td className="border px-4 py-2">{movie.id}</td>
-                            <td className="border px-4 py-2">{movie.title}</td>
-                            <td className="border px-4 py-2">{movie.genres}</td>
-                            <td className="border px-4 py-2">{movie.duration}</td>
-                            <td className="border px-4 py-2">
-                                <div className="flex justify-center">
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded mr-2" onClick={() => handleEdit(movie.id)}>
-                                        Editar
-                                    </button>
-                                    <button className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded" onClick={() => handleDelete(movie.id)}>
-                                        Eliminar
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    ))}
+                        {movies.map((movie: Movie) => (
+                            <tr key={movie.id}>
+                                <td className="border px-4 py-2">{movie.id}</td>
+                                <td className="border px-4 py-2">{movie.title}</td>
+                                <td className="border px-4 py-2">{movie.genres}</td>
+                                <td className="border px-4 py-2">{movie.duration}</td>
+                                <td className="border px-4 py-2">
+                                    <div className="flex justify-center">
+                                        <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded mr-2" onClick={() => handleEdit(movie.id)}>
+                                            Editar
+                                        </button>
+                                        <button className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded" onClick={() => handleDelete(movie.id)}>
+                                            Eliminar
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             ) : (
