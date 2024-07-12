@@ -13,7 +13,7 @@ const RegisterPage: FC = () => {
         if (user) {
             router.push('/');
         }
-    }, []);
+    }, [user, router]);
 
     const [formData, setFormData] = useState({
         name: '',

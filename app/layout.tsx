@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{
             <body className={inter.className}>
                 <ProviderWrapper>
                     <Header />
-                        {children}
+                    {children}
                     <Footer />
                 </ProviderWrapper>
             </body>

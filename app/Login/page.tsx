@@ -14,7 +14,7 @@ const LoginPage: FC = () => {
         if (user) {
             router.push('/');
         }
-    }, []);
+    }, [user, router]);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
