@@ -69,7 +69,7 @@ const EditMoviePage: FC<PageProps> = ({params}) => {
                 router.push('/Login');
             }
         })();
-    }, []);
+    }, [movieId, user, router]);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -115,7 +115,7 @@ const EditMoviePage: FC<PageProps> = ({params}) => {
     };
 
     if (isLoading) {
-        return <Loader/>; // Render a loading indicator
+        return <Loader/>;
     }
 
     return (
