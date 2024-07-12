@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movies front end
 
-## Getting Started
+## Descripción
 
-First, run the development server:
+Front End para la API: https://github.com/leandrodrey/Codo-a-Codo-JS-API
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este proyecto busca simular una aplicación web de películas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Es una APP simple la cuál 
+- Hace uso del sistema de login y registro de la API.
+- Permite ver, filtrar, editar y eliminar las películas que se encuentran en la base de datos de la API. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologías utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Esta app se realizó con Next.js 14.2.5.
 
-## Learn More
+Utilizando:
+- React 18
+- TypeScript 5.3.3
+- Tailwindcss: 3.4.1
+- npm (cómo gestor de paquetes para Node.js)
 
-To learn more about Next.js, take a look at the following resources:
+## Instalación
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Indica aquí los pasos necesarios para instalar y configurar el proyecto. Por ejemplo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clonar el repositorio con `git clone https://github.com/username/proyecto.git`
+2. Moverse al directorio del proyecto con `cd proyecto`
+3. Instalar las dependencias con `npm install`
 
-## Deploy on Vercel
+## Uso
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Describe aquí cómo usar la aplicación, cómo ejecutarla, qué comandos están disponibles, etc.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contribuir
+
+Si este es un proyecto de código abierto, proporciona instrucciones sobre cómo pueden las personas contribuir a él.
+
+## Licencia
+
+Información sobre la licencia.
