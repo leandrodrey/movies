@@ -21,9 +21,7 @@ export default function RootLayout({ children }: Readonly<{
             <body className={inter.className}>
                 <ProviderWrapper>
                     <Header />
-                    <div className="container mx-auto py-4">
                         {children}
-                    </div>
                     <Footer />
                 </ProviderWrapper>
             </body>
