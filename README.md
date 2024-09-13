@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Front End para la API: [https://github.com/leandrodrey/Codo-a-Codo-JS-API](https://github.com/leandrodrey/movies-api)
+Front End para la API: https://github.com/leandrodrey/movies-api
 
 Este proyecto busca simular una aplicación web de películas.
 
