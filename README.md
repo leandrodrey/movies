@@ -12,10 +12,10 @@ Es una APP simple la cuál
 
 ## Tecnologías utilizadas
 
-Esta app se realizó con Next.js 14.2.5.
+Esta app se realizó con Next.js 16.0.10.
 
 Utilizando:
-- React 18
+- React 19.2.3
 - TypeScript 5.3.3
 - Tailwindcss: 3.4.1
 - npm (cómo gestor de paquetes para Node.js)
